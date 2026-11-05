@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LineGeometryCrash.MainPage">
+
+  <ScrollView>
+    <VerticalStackLayout Padding="30,0" Spacing="25">
+      <Label Text="Pressing the 'Working' button will show a page with the working LineGeometry."
+             Style="{StaticResource SubHeadline}"
+             SemanticProperties.HeadingLevel="Level3"
+             Padding="5,0,5,0"/>
+      <Label Text="Pressing the 'Broken' button will crash the app."
+             Style="{StaticResource SubHeadline}"
+             SemanticProperties.HeadingLevel="Level3"
+             Padding="5,0,5,0" />
+
+      <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+        <Button x:Name="WorkingBtn"
+                Text="Working" 
+                Clicked="WorkingBtn_Clicked" />
+        <Button x:Name="BrokenBtn"
+                Text="Broken"                 
+                Clicked="BrokenBtn_Clicked" />
+      </HorizontalStackLayout>
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>

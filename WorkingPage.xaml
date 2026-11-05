@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LineGeometryCrash.WorkingPage"
+             Title="WorkingPage">
+  <VerticalStackLayout>
+    <Label Text="Below is a working LineGeometry. Press the button to go back to the main page."
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+    <Grid Grid.Column="1" WidthRequest="80" HeightRequest="80">
+      <Button x:Name="ReturnBtn"
+              Clicked="ReturnBtn_Clicked"
+              WidthRequest="80"
+              HeightRequest="80"
+              CornerRadius="10"
+              BorderWidth="0"
+              BackgroundColor="Transparent"
+              TextColor="Transparent" />
+      <Path WidthRequest="22"
+            InputTransparent="True"
+            HeightRequest="22"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            StrokeThickness="2.2"
+            StrokeLineCap="Round"
+            Stroke="{AppThemeBinding Light=#1C732F, Dark=#8CE39F}">
+        <Path.Data>
+          <GeometryGroup FillRule="Nonzero">
+            <EllipseGeometry Center="10,10" RadiusX="7" RadiusY="7" />
+            <PathGeometry Figures="M15,15 L19,19" />
+          </GeometryGroup>
+        </Path.Data>
+      </Path>
+    </Grid>
+  </VerticalStackLayout>
+</ContentPage>
