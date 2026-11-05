@@ -1,6 +1,6 @@
 ﻿# Repro_MAUI_LineGeometry_Crash
 A simple reproducible example of the bug when a `LineGeometry` is inside a `GeometryGroup`, that it causes a MAUI App to crash on the Windows platform.  
-Reported in dotnet/maui as issue #39950
+Reported in dotnet/maui#39950
 
 To reproduce:
 1. Load solution into VS
